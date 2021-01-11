@@ -1,0 +1,16 @@
+{% extends 'test/index_test.html' %}
+{% block nav %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="h2">Here is a list of all registered test</p>
+            {% for i in tests %}
+            <a href="{% url 'exam:test_detail' pk=i.test.pk slug=i.test.slug %}"> {{ i.test.test_name }} </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

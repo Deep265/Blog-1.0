@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block body %}
+<form method="POST">
+<div class="container-fluid" align="center">
+  <div class="row">
+   <div class="col-xs-6 col-sm-10 col-md-10 col-xl-10">
+       <div>
+           <i class="fab fa-slack fa-4x" style="color:#ff6969"></i>
+           <h1 class="roboto">Login</h1>
+       </div>
+<div class="form-group">
+
+    <!-- Username -->
+    <div class="input-group m-4">
+        <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fas fa-user"></i></div>
+        </div>
+
+        <input type="text" name="username" class="form-control" placeholder="Username">
+    </div>
+    <!-- End of username -->
+    <!-- Password -->
+    <div class="input-group m-4">
+        <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fas fa-lock"></i></div>
+        </div>
+        <input type="text" name="password" class="form-control" placeholder="Password">
+    </div>
+    <!-- End of Password -->
+    <input type="submit" value="Submit" class="btn btn-warning btn-outline-dark">
+</div>
+   </div>
+  </div>
+</div>
+
+
+    {% csrf_token %}
+{% endblock %}
+</form>
